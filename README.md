@@ -1,7 +1,7 @@
 #Sistema de Login 
 
 Esse é um pequeno projeto que utiliza algumas ferramentas basicas do django, criado com o intuito de entender melhor o framework Django.
-O projeto visa a utilização de usar outras ferramentas em conjunto ao Django como o Tailwind, framework de css.
+O projeto visa a utilização de outras ferramentas em conjunto ao Django como o Tailwind, framework de css.
 
 ## Instalação
 1. Crie um diretório para o projeto e inicie uma máquina virtual
