@@ -26,7 +26,7 @@ O projeto visa a utilização de usar outras ferramentas em conjunto ao Django c
    python manage.py createsuperuser
 3. Por fim, para que o tailwind compile seu css em tempo real, rode o comando:
    **python manage.py tailwind start
-   3.1 Dessa forma, os arquivos html que utilizam classes do tailwind vão ser atualizados automaticamente.
+
    
 
 
