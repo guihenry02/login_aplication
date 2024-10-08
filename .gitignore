@@ -36,3 +36,5 @@ Thumbs.db
 
 # Outros
 /staticfiles/
+node_modules/
+static/tailwind/

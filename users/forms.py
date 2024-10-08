@@ -12,7 +12,6 @@ class RegistrationForm(form.ModelForm):
     def clean_username(self):
         username = self.cleaned_data.get('username')
 
-        # Verifica se o nome de usuário já existe
         if Users.objects.filter(username=username).exists():
             raise forms.ValidationError("Esse nome de usuário já está cadastrado. Por favor, escolha outro.")
 

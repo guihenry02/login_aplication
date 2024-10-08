@@ -16,6 +16,7 @@ def CreateUser(request):
                 password=form.cleaned_data['password'], 
                 phone=form.cleaned_data['phone']
             )
+            
             return redirect('login')  
     return render(request, 'users/cadastro.html', {'form': form}) 
 
@@ -24,10 +25,9 @@ def ValidateUser(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(username=username, password=password)
-        
         if user:
             login(request, user)
-            return redirect('mainpage')
+            return redirect('home')
         else:
             messages.error(request, 'Credenciais inválidas. Tente novamente.')
     
@@ -37,4 +37,3 @@ def ValidateUser(request):
 @login_required
 def MainPage(request):
     return render(request, 'users/auth.html')
-    
