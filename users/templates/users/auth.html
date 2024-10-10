@@ -8,7 +8,19 @@
     <title>Home Page</title>
     {% tailwind_css %}
 </head>
-<body>
-    <h1 class="text-green-500 text-3xl font-bold m-8">Autenticado</h1>
+<body class="bg-gray-200">
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold">Bem-vindo!</h1>
+        <p class="mt-4">Você está logado como {{ user.username }}.</p>
+        
+        <div class="mt-8">
+            <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    Logout
+                </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
